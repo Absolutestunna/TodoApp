@@ -9,17 +9,20 @@
     <script src="js/app.js"></script>
 
   </head>
-  <body ng-app="Todo">
-    <div ng-controller="TodoCtrl">
+  <body ng-app="myApp">
+    <div class="" ng-controller="TodoCtrl">
       <h2>Todo List</h2>
       <ul ng-repeat="todo in todos track by $index">
         <li>
-           <span>{{todo}}</span>
-           <button ng-click="done(todo)" type="button" name="button">Done</button>
-         </li>
+          <span>{{todo}}</span>
+          <button type="button" ng-click="done(todo)">Done</button>
+        </li>
       </ul>
 
-      <input type="text" ng-model="newTodo" placeholder="newTodo" ng-keyup="addTodo($event)"/>
+      <input type="text" ng-model="tItem" ng-keyup="remove($event)" placeholder="New Task" />
+
     </div>
+
+
   </body>
 </html>
